@@ -1,4 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body {
   background-color: #242829;
+  margin: 0 auto;
+  font-family: Roboto;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin-top: 40px;
+  justify-content: center;
+  z-index: 2;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  color: #e8e8e8;
+  width: 45vw;
+}
+
+.menu li {
+  font-size: 18px;
+  text-align: center;
+}
+
+header img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 45px;
+}
+
+header h1 {
+  text-transform: uppercase;
+  color: #ff9862;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.homepage {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-image: url("/assets/images/dog01.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.homepage span {
+  width: 45vw;
+  position: absolute;
+  top: 30%;
+}
+
+.homepage p {
+  color: #ff9862;
+  width: 300px;
+  font-size: 19px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+.homepage ul {
+  display: flex;
+  color: #e8e8e8;
+}
+
+.icons {
+  width: fit-content;
+  font-size: 45px;
+  color: #ff9862;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
