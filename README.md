@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Esta aplicação é um desafio técnico utilizando as linguagens HTML, CSS e JavaScript. Como o conteúdo era livre, tive a ideia de desenvolver um website de um projeto de voluntariado fictício que fotografa cãezinhos de rua para ajudar a encontrarem um lar. É um tema que gosto muito e fiquei bastante empolgada para desenvolver! Implementei desde o design, com protótipo no Figma até a lógica implementada. Caso tenha curiosidade, confira o protótipo aqui: https://www.figma.com/file/0KEwlxaAcsVgG5oKR8n4Oy/Desafio-T%C3%A9cnico?node-id=0%3A1&t=BIZbB4pw5NlEsODF-1</p>
+<p align="left">Esta aplicação é um desafio técnico utilizando as linguagens HTML, CSS e JavaScript. Como o conteúdo era livre, tive a ideia de desenvolver um website de um projeto de voluntariado fictício que fotografa cãezinhos de rua para ajudar a encontrarem um lar. É um tema que gosto muito e fiquei bastante empolgada para desenvolver! Implementei desde o design, com protótipo no Figma até a lógica implementada. O deploy da aplicação encontra-se no link: https://caopture.vercel.app e caso tenha curiosidade, confira o protótipo aqui: https://www.figma.com/file/0KEwlxaAcsVgG5oKR8n4Oy/Desafio-T%C3%A9cnico?node-id=0%3A1&t=BIZbB4pw5NlEsODF-1</p>
 
 ###
 
