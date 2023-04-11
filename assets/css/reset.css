@@ -32,10 +32,6 @@ em,
 img,
 ins,
 kbd,
-q,
-s,
-samp,
-small,
 strike,
 strong,
 sub,
@@ -107,6 +103,8 @@ section {
 }
 body {
   line-height: 1;
+  padding: 0;
+  box-sizing: border-box;
 }
 ol,
 ul {

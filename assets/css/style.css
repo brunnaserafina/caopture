@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/*Estilos gerais*/
+
 body {
   background-color: #242829;
-  margin: 0 auto;
   font-family: Roboto;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -20,25 +22,67 @@ header {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 strong {
   font-weight: 700;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
+.hidden {
+  display: none;
 }
 
-.menu {
+/*Homepage*/
+
+.logo-menu {
+  display: flex;
+  justify-content: center;
+  animation: blink 10s calc(2);
+}
+
+.logo-menu span {
+  display: flex;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.menu-large-screen {
   display: flex;
   justify-content: space-between;
   color: #e8e8e8;
   width: 45vw;
 }
 
-.menu li {
+.menu-large-screen li {
+  text-align: center;
+}
+
+.menu-large-screen li a {
+  color: #e8e8e8;
   font-size: 18px;
   text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu-list {
+  display: none;
+}
+
+.menu-large-screen li:hover,
+.container-dogs a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 header img {
@@ -54,7 +98,27 @@ header h1 {
   font-weight: 600;
 }
 
-.homepage {
+.navbar {
+  transition: all 2s ease-in-out;
+}
+
+.navbar.active {
+  display: block;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+#homepage {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -66,21 +130,26 @@ header h1 {
   background-repeat: no-repeat;
 }
 
-.homepage span {
+#homepage span {
   width: 45vw;
   position: absolute;
   top: 30%;
 }
 
-.homepage p {
+#homepage p {
   color: #ff9862;
-  width: 300px;
+  width: 320px;
   font-size: 19px;
   line-height: 20px;
   font-style: italic;
+  opacity: 0.6;
 }
 
-.homepage ul {
+#homepage p:hover {
+  opacity: 1;
+}
+
+#homepage ul {
   display: flex;
   color: #e8e8e8;
 }
@@ -88,19 +157,35 @@ header h1 {
 .icons {
   width: fit-content;
   font-size: 45px;
-  color: #ff9862;
   position: absolute;
   bottom: 10px;
   right: 25px;
 }
 
-.all-dogs {
+.icons a {
+  color: #ff9862;
+  text-decoration: none;
+}
+
+ion-icon {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+ion-icon:hover {
+  opacity: 1;
+}
+
+/*Seção dos cãezinhos*/
+
+.container-dogs {
   background-color: #ff9862;
-  padding: 1.5vw;
+  padding: 1.5vw 0;
   display: flex;
   height: 550px;
   overflow-x: hidden;
   scrollbar-width: none;
+  scroll-behavior: unset;
   overflow-y: hidden;
   width: 100vw;
   box-sizing: border-box;
@@ -109,40 +194,56 @@ header h1 {
 main h2 {
   color: #ff9862;
   font-size: 30px;
-  margin: 20vh 0px 0;
+  margin: 10vh 0px 0;
   font-weight: 500;
   text-transform: lowercase;
+  text-align: center;
 }
 
-.all-dogs > div {
+#dogs,
+#ongs,
+#mission {
+  padding: 20px 0;
+}
+
+.container-dogs {
+  margin-right: 0;
+}
+
+.container-dogs > div {
   width: 600px;
   height: 400px;
   object-fit: cover;
-  margin-right: 20px;
+  margin: 0 20px;
   display: inline-block;
 }
 
-.all-dogs img {
+.container-dogs img {
   width: 600px;
   height: 400px;
   object-fit: cover;
   border-radius: 15px;
 }
 
-.all-dogs p {
+.container-dogs p {
   margin-top: 5px;
 }
 
-.all-dogs div > p:nth-child(2) {
+.container-dogs a {
+  color: #242829;
+  text-decoration: none;
+}
+
+.container-dogs div > p:nth-child(2) {
   font-size: 17px;
   text-align: justify;
 }
 
-.all-dogs div > p:nth-child(3) {
+.container-dogs div > p:nth-child(3) {
   font-weight: 600;
 }
 
-.arrow {
+.arrow-right {
   color: #e8e8e8;
   position: absolute;
   font-size: 50px;
@@ -151,43 +252,60 @@ main h2 {
   cursor: pointer;
 }
 
-.text-align-center {
-  text-align: center;
+.arrow-left {
+  color: #e8e8e8;
+  position: absolute;
+  font-size: 50px;
+  left: 1px;
+  margin-top: 200px;
+  cursor: pointer;
+  display: none;
 }
 
-.text-align-end {
-  text-align: end;
-}
+/*Seção ONGS atendidas pelo projeto*/
 
-.ongs div {
+#ongs div {
   width: 100%;
   height: 300px;
   display: flex;
   justify-content: center;
 }
 
-.ongs > div > span {
+#ongs > div > span {
   height: 200px;
   margin-right: 20px;
+  filter: sepia(90%) hue-rotate(2deg);
 }
 
-.ongs p {
+#ongs p {
   color: #e8e8e8;
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 
-.ongs img {
+#ongs a {
+  text-align: center;
+}
+
+#ongs span:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  filter: none;
+}
+
+#ongs img {
   height: 120px;
   margin: 50px 10px 0px;
   align-self: center;
-  filter: grayscale(100%);
-  filter: sepia(90%) hue-rotate(1deg);
+  cursor: pointer;
 }
 
-.mission {
+/*Seção missão do projeto*/
+
+#mission div {
   width: 100vw;
   padding: 1.5vw;
   box-sizing: border-box;
@@ -198,7 +316,7 @@ main h2 {
   margin-bottom: 20vh;
 }
 
-.mission p {
+#mission p {
   width: 50%;
   font-size: 18px;
   line-height: 25px;
@@ -207,20 +325,20 @@ main h2 {
   font-weight: 500;
 }
 
-.mission img {
+#mission img {
   width: 45%;
   height: 80%;
   object-fit: cover;
   border-radius: 15px;
 }
 
-.fineline {
-  height: 10px;
-  background-color: #ff9862;
-  width: 100vw;
+#mission img:hover {
+  filter: sepia(55%);
 }
 
-.contact {
+/*Formulário de contato*/
+
+#contact {
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -228,11 +346,11 @@ main h2 {
   align-items: center;
 }
 
-.contact > div {
+#contact > div {
   width: 600px;
 }
 
-.contact div > p {
+#contact div > p {
   width: 100%;
   color: #e8e8e8;
   margin-top: 10px;
@@ -240,16 +358,16 @@ main h2 {
   text-align: justify;
 }
 
-.contact span {
+#contact span {
   display: flex;
 }
 
-.contact span div {
+#contact span div {
   display: flex;
   flex-direction: column;
 }
 
-label {
+#contact label {
   color: #e8e8e8;
   margin-bottom: 5px;
 }
@@ -281,7 +399,7 @@ textarea {
   box-sizing: border-box;
 }
 
-button {
+form button {
   width: 100%;
   border-radius: 10px;
   height: 30px;
@@ -290,6 +408,19 @@ button {
   font-size: 17px;
   font-weight: 600;
   margin-bottom: 20vh;
+  cursor: pointer;
+}
+
+/*Rodapé do site*/
+
+.address {
+  cursor: pointer;
+  color: #242829;
+  text-align: center;
+}
+
+.address:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -323,4 +454,347 @@ footer > p {
   text-align: center;
   color: #242829;
   font-weight: 400;
+}
+
+/*Barra de Scroll*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ff9862;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #242829;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #242829;
+}
+
+.menu-mobile-screen {
+  display: none;
+}
+
+/*Ícone de scrollar para o topo*/
+
+#scroll-to-top ion-icon {
+  right: 10px;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 50px;
+  border: none;
+  color: #e8e8e8;
+  background-color: transparent;
+  opacity: 1;
+  display: block;
+}
+
+/*Player de música*/
+
+.music-player {
+  position: fixed;
+  z-index: 2;
+  background-color: #242829;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-player ion-icon {
+  color: #242829;
+  opacity: 1;
+}
+
+.music-player button {
+  background-color: #ff9862;
+}
+
+.music-player .btn:hover {
+  transform: translateY(0.2rem);
+  box-shadow: 0 14px 2px #444;
+}
+
+.pressed {
+  transform: translateY(0.6rem) !important;
+  box-shadow: 0 5px 2px #444 !important;
+}
+
+.btn {
+  flex: 1;
+  border: 1px solid #444;
+  box-shadow: 0 15px 2px #444;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: linear 0.1s;
+}
+
+/*----------Responsividade do site------------*/
+
+@media screen and (max-width: 767px) {
+  main {
+    overflow-x: hidden;
+  }
+
+  main h2 {
+    font-size: 25px;
+  }
+
+  /*Homepage*/
+
+  .menu-large-screen {
+    display: none;
+  }
+
+  .logo-menu {
+    width: 100vw;
+    justify-content: space-between;
+    animation: none;
+    padding: 8vw;
+    box-sizing: border-box;
+  }
+
+  .logo-menu h1 {
+    font-size: 19px;
+  }
+
+  .logo-menu img {
+    width: 60px;
+  }
+
+  .menu-hamburguer {
+    display: inline;
+    font-size: 40px;
+    color: #ff9862;
+    opacity: 1;
+  }
+
+  .menu-list {
+    width: 100vw;
+    color: #e8e8e8;
+    background-color: #ff9862;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-list a {
+    color: #242829;
+    text-decoration: none;
+    font-size: 18px;
+
+    text-align: right;
+  }
+
+  ion-icon {
+    opacity: 1;
+  }
+
+  .menu-mobile-screen {
+    display: inline;
+    position: absolute;
+    right: 5vw;
+    width: fit-content;
+  }
+
+  .hamburger {
+    float: right;
+    color: #ff9862;
+    font-size: 30px;
+  }
+
+  .navbar {
+    background-color: #242829;
+    width: 100%;
+    height: fit-content;
+    display: none;
+    padding: 3vw;
+  }
+
+  .navbar ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .navbar li {
+    display: block;
+    margin: 0;
+    padding: 14px 20px;
+    width: 100%;
+    transition: background-color 0.5s;
+  }
+
+  .navbar li:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+  }
+
+  .navbar li a {
+    color: #ff9862;
+    text-decoration: none;
+    transition: all 1s;
+    text-align: center;
+  }
+
+  #homepage span {
+    width: 100vw;
+    padding: 8vw;
+    box-sizing: border-box;
+    top: 20%;
+  }
+
+  #homepage p {
+    color: #e8e8e8;
+    width: 60%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    opacity: 1;
+  }
+
+  .icons {
+    font-size: 30px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  /*Seção dos cãezinhos*/
+
+  .container-dogs {
+    overflow-x: scroll;
+    height: fit-content;
+  }
+
+  .container-dogs::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .container-dogs > div {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .container-dogs img {
+    margin-top: 2vw;
+    width: 90vw;
+  }
+
+  .container-dogs p {
+    margin-bottom: 10px;
+  }
+
+  #dogs,
+  #ongs,
+  #mission {
+    margin-top: 5px;
+    padding: 0px 0;
+  }
+
+  /*Seção das ongs atendidas pelo projeto*/
+
+  #ongs div {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #ongs > div > span {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #ongs p {
+    color: #e8e8e8;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  #ongs img {
+    height: 120px;
+    margin: 50px 10px 0px;
+    align-self: center;
+  }
+
+  /*Seção da missão do projeto*/
+
+  #mission div {
+    flex-direction: column;
+    padding: 0.5vw;
+  }
+
+  #mission p {
+    width: 90%;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 20px 0;
+    font-weight: 400;
+  }
+
+  #mission img {
+    width: 90%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  /*Formulário de contato*/
+
+  #contact > div {
+    width: 100vw;
+    height: fit-content;
+    padding: 0 10vw;
+    box-sizing: border-box;
+  }
+
+  #contact span {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  /*Barra scroll*/
+
+  ::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #e8e8e8;
+  }
+
+  /*Player de música*/
+
+  .music-player {
+    display: none;
+  }
+}
+
+/*Peculiaridade para responsividade de telas de tablet*/
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .logo-menu {
+    animation: none;
+  }
 }

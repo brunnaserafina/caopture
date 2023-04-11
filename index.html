@@ -5,237 +5,347 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Cãopture</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/images/logo-caopture.svg"
+    />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("ClZtahMJijyg_z-ha");
+      })();
+    </script>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img
-          src="./assets/images/logo-caopture.svg"
-          alt="Logo Projeto Cãopture"
-        />
-        <h1>
-          Projeto <br />
-          Cãopture
-        </h1>
+      <div class="logo-menu">
+        <span>
+          <img
+            src="./assets/images/logo-caopture.svg"
+            alt="Logo Projeto Cãopture"
+          />
+          <h1>
+            Projeto <br />
+            Cãopture
+          </h1>
+        </span>
+
+        <div class="menu-mobile-screen">
+          <div class="hamburger">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <nav class="navbar">
+            <ul>
+              <li><a href="#homepage">Home</a></li>
+              <li><a href="#dogs">Nossos cãezinhos</a></li>
+              <li><a href="#ongs">ONG's parceiras</a></li>
+              <li><a href="#mission">Nossa missão</a></li>
+              <li><a href="#contact">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <ul class="menu">
-        <li>Home</li>
-        <li>Nossos cãezinhos</li>
-        <li>ONG's parceiras</li>
-        <li>Nossa missão</li>
-        <li>Contato</li>
+      <ul class="menu-large-screen">
+        <li><a href="#homepage">Home</a></li>
+        <li><a href="#dogs">Nossos cãezinhos</a></li>
+        <li><a href="#ongs">ONG's parceiras</a></li>
+        <li><a href="#mission">Nossa missão</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </header>
 
     <main>
-      <div class="homepage">
+      <audio src="/assets/music/HoliznaPATREON - Nostalgia.mp3"></audio>
+      <div class="music-player">
+        <button onclick="play(this)" class="btn play">
+          <ion-icon name="musical-notes"></ion-icon>
+        </button>
+      </div>
+
+      <section id="homepage">
         <span>
           <p>
-            “Somos um grupo de fotógrafos que se dedica a ajudar cãezinhos de
-            rua a encontrar um lar, por meio de fotos que destacam sua beleza e
-            personalidade.”
+            “Somos um grupo de fotógrafos que se voluntariam para ajudar
+            cãezinhos de rua a encontrarem um lar, através de fotos que destacam
+            sua beleza e personalidade.”
           </p>
         </span>
         <div class="icons">
-          <ion-icon name="logo-instagram"></ion-icon>
-          <ion-icon name="logo-facebook"></ion-icon>
+          <a href="https://www.instagram.com" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
         </div>
-      </div>
-      <!-- <div class="fineline"></div> -->
+      </section>
 
-      <h2 class="text-align-center">Nossos aumiguinhos</h2>
+      <section id="dogs">
+        <h2>Nossos aumiguinhos</h2>
 
-      <div class="all-dogs">
-        <div>
-          <img
-            src="/assets/images/dog-osvaldinho.jpg"
-            alt="Cachorro Osvaldinho"
-          />
-          <p>
-            <strong>Osvaldinho</strong>, apesar de ser um pouco tímido no
-            começo, se solta rapidamente e se torna um companheiro leal e
-            amoroso. Ele adora estar perto das pessoas e sempre está pronto para
-            receber afeto e atenção. É um cãozinho muito carinhoso e que adora
-            dar lambidas e abanar o rabinho.
-          </p>
-          <p>ONG: Patinhas Livres</p>
-        </div>
+        <div class="container-dogs">
+          <span class="arrow-left">
+            <ion-icon name="chevron-back-circle"></ion-icon>
+          </span>
 
-        <div>
-          <img
-            src="/assets/images/dog-panqueca.jpg"
-            alt="Cachorro Osvaldinho"
-          />
-          <p>
-            <strong>Panqueca</strong> é bastante dócil e pode conviver muito bem
-            com crianças e outros animais, sejam eles cães ou gatos. Ela é uma
-            cadelinha muito especial e adoraria ter um lar cheio de amor. Com
-            sua personalidade gentil e amorosa, tem tudo para ser uma grande
-            companheira para seus donos.
-          </p>
-          <p>ONG: Patinhas Livres</p>
-        </div>
-
-        <div>
-          <img src="/assets/images/dog-marvin.jpg" alt="Cachorro Osvaldinho" />
-          <p>
-            <strong> Marvin</strong> é um cãozinho bastante enérgico e
-            brincalhão, que adora se divertir e explorar o mundo ao seu redor.
-            Ele é cheio de energia e está sempre pronto para uma nova aventura.
-            Marvin é muito curioso e gosta de cheirar e investigar tudo ao seu
-            redor.
-          </p>
-          <p>ONG: Aumigos Peludos</p>
-        </div>
-
-        <div>
-          <img
-            src="/assets/images/dog-estrelinha.jpg"
-            alt="Cachorro Osvaldinho"
-          />
-          <p>
-            <strong>Estrelinha</strong> é doce, muito dorminhoca e está ansiosa
-            para encontrar uma família amorosa para chamar de sua. Ela gosta de
-            receber atenção e de brincar com seus brinquedos favoritos, mas
-            também é uma ótima companhia para um passeio tranquilo e promete
-            trazer muita alegria e amor para a vida de sua nova família.
-          </p>
-          <p>ONG: Aumigos Peludos</p>
-        </div>
-
-        <span class="arrow">
-          <ion-icon name="chevron-forward-circle"></ion-icon>
-        </span>
-      </div>
-
-      <h2 class="text-align-center">ONG’s já atendidas</h2>
-      <div class="ongs">
-        <div>
-          <span>
+          <div>
             <img
-              src="/assets/images/logo-patinhas-livres.png"
-              alt="ONG Patinhas Livres"
+              src="/assets/images/dog-osvaldinho.jpg"
+              alt="Cachorro Osvaldinho"
             />
             <p>
-              Patinhas<br />
-              Livres
+              <strong>Osvaldinho</strong>, apesar de ser um pouco tímido no
+              começo, se solta rapidamente e se torna um companheiro leal e
+              amoroso. Ele adora estar perto das pessoas e sempre está pronto
+              para receber afeto e atenção. É um cãozinho muito carinhoso e que
+              adora dar lambidas e abanar o rabinho.
             </p>
-          </span>
 
-          <span>
+            <p>
+              <a href="https://www.instagram.com" target="_blank">
+                ONG: Patinhas Livres
+              </a>
+            </p>
+          </div>
+
+          <div>
             <img
-              src="/assets/images/logo-coracao-canino.png"
-              alt="ONG Coração Canino"
+              src="/assets/images/dog-panqueca.jpg"
+              alt="Cachorro Osvaldinho"
             />
             <p>
-              Coração <br />
-              Canino
+              <strong>Panqueca</strong> é bastante dócil e pode conviver muito
+              bem com crianças e outros animais, sejam eles cães ou gatos. Ela é
+              uma cadelinha muito especial e adoraria ter um lar cheio de amor.
+              Com sua personalidade gentil e amorosa, tem tudo para ser uma
+              grande companheira para seus donos.
             </p>
-          </span>
+            <p>
+              <a href="https://www.instagram.com" target="_blank">
+                ONG: Patinhas Livres
+              </a>
+            </p>
+          </div>
 
-          <span>
+          <div>
             <img
-              src="/assets/images/logo-caomiando-juntos.png"
-              alt="ONG Cãomiando Juntos"
+              src="/assets/images/dog-marvin.jpg"
+              alt="Cachorro Osvaldinho"
             />
-            <p>Cãomiando <br />Juntos</p>
-          </span>
+            <p>
+              <strong> Marvin</strong> é um cãozinho bastante enérgico e
+              brincalhão, que adora se divertir e explorar o mundo ao seu redor.
+              Ele é cheio de energia e está sempre pronto para uma nova
+              aventura. Marvin é muito curioso e gosta de cheirar e investigar
+              tudo ao seu redor.
+            </p>
+            <p>
+              <a href="https://www.instagram.com" target="_blank">
+                ONG: Aumigos Peludos
+              </a>
+            </p>
+          </div>
 
-          <span>
+          <div>
             <img
-              src="/assets/images/logo-aumigos-peludos.png"
-              alt="ONG Aumigos Peludos"
+              src="/assets/images/dog-estrelinha.jpg"
+              alt="Cachorro Osvaldinho"
             />
-            <p>Aumigos <br />Peludos</p>
+            <p>
+              <strong>Estrelinha</strong> é doce, muito dorminhoca e está
+              ansiosa para encontrar uma família amorosa para chamar de sua. Ela
+              gosta de receber atenção e de brincar com seus brinquedos
+              favoritos, mas também é uma ótima companhia para um passeio
+              tranquilo e promete trazer muita alegria e amor para sua nova
+              família.
+            </p>
+            <p>
+              <a href="https://www.instagram.com" target="_blank">
+                ONG: Aumigos Peludos
+              </a>
+            </p>
+          </div>
+
+          <span class="arrow-right">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
           </span>
         </div>
-      </div>
+      </section>
 
-      <h2 class="text-align-center">Nossa missão</h2>
-      <div class="mission">
-        <p>
-          "Como fotógrafos de cachorros de rua resgatados por ONGs, temos um
-          objetivo nobre e necessário, com foco naqueles que já estão há muito
-          tempo esperando por um lar. Trabalhamos em parceria com as ONGs para
-          capturar imagens que mostrem a beleza e a individualidade de cada cão,
-          e assim ajudá-los a encontrar um lar amoroso e responsável. Sabemos
-          que cada foto pode fazer a diferença na vida de um animal abandonado,
-          e é por isso que nos esforçamos para fazer o melhor trabalho possível,
-          mesmo em condições desafiadoras. As fotos que capturamos são uma forma
-          poderosa de promover a adoção de cachorros de rua. Elas podem
-          transmitir emoção e despertar o interesse de pessoas que não conhecem
-          o animal pessoalmente. Além disso, as imagens ajudam as ONGs a mostrar
-          o trabalho que realizam e a importância de apoiar a causa animal. Nos
-          sentimos orgulhosos de fazer parte desse grupo que trabalha em prol da
-          adoção responsável, e estamos comprometidos em continuar ajudando
-          esses animais que muitas vezes são esquecidos pela sociedade."
-        </p>
-        <img src="/assets/images/team.png" alt="" />
-      </div>
-
-      <h2 class="text-align-center">Fale conosco</h2>
-      <div class="contact">
+      <section id="ongs">
+        <h2>ONG’s já atendidas</h2>
         <div>
+          <span>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/logo-patinhas-livres.png"
+                alt="ONG Patinhas Livres"
+              />
+              <p>
+                Patinhas<br />
+                Livres
+              </p>
+            </a>
+          </span>
+
+          <span>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/logo-coracao-canino.png"
+                alt="ONG Coração Canino"
+              />
+              <p>
+                Coração <br />
+                Canino
+              </p>
+            </a>
+          </span>
+
+          <span>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/logo-caomiando-juntos.png"
+                alt="ONG Cãomiando Juntos"
+              />
+              <p>Cãomiando <br />Juntos</p>
+            </a>
+          </span>
+
+          <span>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="/assets/images/logo-aumigos-peludos.png"
+                alt="ONG Aumigos Peludos"
+              />
+              <p>Aumigos <br />Peludos</p>
+            </a>
+          </span>
+        </div>
+      </section>
+
+      <section id="mission">
+        <h2>Nossa missão</h2>
+        <div>
+          <p>
+            "Como fotógrafos de cachorros de rua resgatados por ONGs, temos um
+            objetivo nobre e necessário, com foco naqueles que já estão há muito
+            tempo esperando por um lar. Trabalhamos em parceria com as ONGs para
+            capturar imagens que mostrem a beleza e a individualidade de cada
+            cão, e assim ajudá-los a encontrar um lar amoroso e responsável.
+            Sabemos que cada foto pode fazer a diferença na vida de um animal
+            abandonado, e é por isso que nos esforçamos para fazer o melhor
+            trabalho possível, mesmo em condições desafiadoras. As fotos que
+            capturamos são uma forma poderosa de promover a adoção de cachorros
+            de rua porque podem transmitir emoção e despertar o interesse de
+            pessoas que não conhecem o animal pessoalmente. Além disso, as
+            imagens ajudam as ONGs a mostrar o trabalho que realizam e a
+            importância de apoiar a causa animal. Nos sentimos orgulhosos de
+            fazer parte desse grupo que trabalha em prol da adoção responsável,
+            e estamos comprometidos em continuar ajudando esses animais que
+            muitas vezes são esquecidos pela sociedade."
+          </p>
+          <img src="/assets/images/team.png" alt="" />
+        </div>
+      </section>
+
+      <section id="contact">
+        <div>
+          <h2>Fale conosco</h2>
           <p>
             Quer divulgar algum cachorrinho da sua ONG, fazer parte do nosso
             projeto ou se interessou pela adoção de um dos nossos aumiguinhos?
             Preencha os campos abaixo que entraremos em contato!
           </p>
-          <form>
+          <form id="contact-form">
             <span>
               <div>
                 <label>Seu nome*:</label>
-                <input type="text" placeholder="Digite aqui seu nome" />
+                <input
+                  type="text"
+                  placeholder="Digite aqui seu nome"
+                  id="name"
+                  name="name"
+                  required
+                />
               </div>
               <div>
                 <label>E-mail*:</label>
-                <input type="email" placeholder="email@exemplo.com" />
+                <input
+                  type="email"
+                  placeholder="email@exemplo.com"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
             </span>
 
             <span>
               <div>
                 <label>Telefone:</label>
-                <input type="tel" placeholder="(_ _)_ _ _ _ _- _ _ _ _" />
+                <input
+                  type="tel"
+                  placeholder="(_ _)_ _ _ _ _- _ _ _ _"
+                  id="phone"
+                  name="phone"
+                />
               </div>
               <div>
                 <label>Assunto:</label>
-                <input type="text" placeholder="Digite aqui o assunto" />
+                <input
+                  type="text"
+                  placeholder="Digite aqui o assunto"
+                  id="subject"
+                  name="subject"
+                />
               </div>
             </span>
             <div class="message">
               <label>Mensagem*:</label>
               <textarea
                 placeholder="Escreva aqui sua mensagem"
-                name=""
-                id=""
+                name="message"
+                id="message"
                 cols="30"
                 rows="10"
+                required
               ></textarea>
             </div>
             <button type="submit">Enviar</button>
           </form>
         </div>
-      </div>
+      </section>
     </main>
+
+    <button id="scroll-to-top" class="hidden">
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </button>
 
     <footer>
       <div>
-        <ion-icon name="logo-instagram"></ion-icon>
-        <ion-icon name="logo-facebook"></ion-icon>
+        <a href="https://www.instagram.com" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
       </div>
-      <div>
+      
+      <a href="https://www.google.com.br/maps" target="_blank" class="address">
         <p>Site de um projeto fictício</p>
         <p>Rua dos Fotógrafos Caninos 7070, DogCity</p>
         <p>(12) 3456-7890</p>
-      </div>
+      </a>
 
       <p>Copyright © 2023 Projeto Cãopture</p>
     </footer>
 
+    <script src="/assets/js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
