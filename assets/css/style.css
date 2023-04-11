@@ -109,8 +109,9 @@ header h1 {
 main h2 {
   color: #ff9862;
   font-size: 30px;
-  margin: 20vh 30px 0;
-  font-weight: 700;
+  margin: 20vh 0px 0;
+  font-weight: 500;
+  text-transform: lowercase;
 }
 
 .all-dogs > div {
@@ -215,4 +216,65 @@ main h2 {
   height: 10px;
   background-color: #ff9862;
   width: 100vw;
+}
+
+.contact {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > p {
+  width: 625px;
+  color: #e8e8e8;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.contact span {
+  display: flex;
+}
+
+.contact span div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #e8e8e8;
+  margin-bottom: 5px;
+}
+
+input {
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 300px;
+  border: none;
+  margin-right: 15px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: Roboto;
+}
+
+button {
+  width: 640px;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  background-color: #ff9862;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20vh;
 }
