@@ -161,7 +161,7 @@ main h2 {
 
 .ongs div {
   width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
 }
@@ -183,6 +183,8 @@ main h2 {
   height: 120px;
   margin: 50px 10px 0px;
   align-self: center;
+  filter: grayscale(100%);
+  filter: sepia(90%) hue-rotate(1deg);
 }
 
 .mission {
@@ -226,8 +228,12 @@ main h2 {
   align-items: center;
 }
 
-.contact > p {
-  width: 625px;
+.contact > div {
+  width: 600px;
+}
+
+.contact div > p {
+  width: 100%;
   color: #e8e8e8;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -249,12 +255,13 @@ label {
 }
 
 input {
+  width: 290px;
   height: 30px;
   border-radius: 10px;
   margin-bottom: 20px;
-  width: 300px;
   border: none;
-  margin-right: 15px;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
 .message {
@@ -262,14 +269,20 @@ input {
   flex-direction: column;
 }
 
+form > span {
+  justify-content: space-around;
+}
+
 textarea {
   border-radius: 10px;
   margin-bottom: 10px;
   font-family: Roboto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 button {
-  width: 640px;
+  width: 100%;
   border-radius: 10px;
   height: 30px;
   border: none;
@@ -277,4 +290,37 @@ button {
   font-size: 17px;
   font-weight: 600;
   margin-bottom: 20vh;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9862;
+  padding: 10px 0;
+}
+
+footer p {
+  color: #242829;
+  font-weight: 700;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer ion-icon {
+  color: #242829;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+footer > p {
+  margin: 30px 0 0;
+  width: 100%;
+  text-align: center;
+  color: #242829;
+  font-weight: 400;
 }
