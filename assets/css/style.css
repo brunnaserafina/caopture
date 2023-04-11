@@ -125,6 +125,7 @@ main h2 {
   width: 600px;
   height: 400px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .all-dogs p {
@@ -153,6 +154,10 @@ main h2 {
   text-align: center;
 }
 
+.text-align-end {
+  text-align: end;
+}
+
 .ongs div {
   width: 100%;
   height: 400px;
@@ -177,4 +182,37 @@ main h2 {
   height: 120px;
   margin: 50px 10px 0px;
   align-self: center;
+}
+
+.mission {
+  width: 100vw;
+  padding: 1.5vw;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #ff9862;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+
+.mission p {
+  width: 50%;
+  font-size: 18px;
+  line-height: 25px;
+  margin-right: 25px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+.mission img {
+  width: 45%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.fineline {
+  height: 10px;
+  background-color: #ff9862;
+  width: 100vw;
 }
